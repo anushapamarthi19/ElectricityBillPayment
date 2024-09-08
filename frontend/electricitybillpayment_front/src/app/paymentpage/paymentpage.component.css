@@ -1,0 +1,36 @@
+.btn-primary{
+    background-color: rgb(77, 77, 250);
+    border-color: blue;
+    margin-right: 50px;
+    margin-top: 5px;
+    
+}
+.btn-primary:hover{
+ box-shadow: 10px 10px  rgba(0,0,0,0.2);
+    
+}
+.headline{
+    color:white;
+}
+
+.col{
+    top: 60px;
+}
+.card{
+    background-attachment: fixed;
+    color:white;
+    background-color: rgba(0, 0, 0, 0.3);
+
+}
+
+.body{
+    background-image: url('../../assets/pexels-photo-5935739.webp');
+    height: 617px;
+    background-attachment: fixed;
+     background-position: center;
+    background-size: cover; 
+    font-family: sans-serif; 
+}
+small{
+    color: red;
+}

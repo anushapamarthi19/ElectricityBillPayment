@@ -1,0 +1,94 @@
+.card{
+    width: 600px;
+    height: 580px;
+     padding-left: 90px;
+    /* padding-right: 30px;  */
+    margin-left: 500px;
+    /* top: 5px; */
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    
+  -webkit-backdrop-filter: blur(3px);
+
+  backdrop-filter: blur(3px);
+    
+}
+.card:hover{
+    box-shadow:  5px 5px 15px yellow;
+}
+.card-header{
+    font-size: 20px;
+}
+
+.body{
+    background-image: url('../../assets/Electric image.webp');
+    height: 650px;
+    background-attachment: fixed;
+     background-position: center;
+    background-size: cover; 
+    font-family: sans-serif; 
+    
+} 
+small{
+    color: red;
+    margin-left: 90px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ede4e4;
+  }
+  
+  input {
+    width: 80%;
+    padding: 8px ;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }    
+    
+
+input:hover{
+    box-shadow:  20px 20px 10px black;
+}
+
+.btn-primary{
+    background-color: rgb(68, 68, 68);
+    border-color: blue;
+    /* margin-right: 100px; */
+    margin-left: 70px;
+    margin-top: 5px;
+    border-radius: 15px;
+    padding: 10px 40px;
+}
+.btn-secondary{
+    background-color: rgb(68, 68, 68);
+    border-color: blue;
+    margin-top: 5px;
+    margin-left: 60px;
+    border-radius: 15px;
+    padding: 10px 40px;
+}
+
+.btn-primary:hover{
+    background-color: black;
+    box-shadow: -5px 5px 15px yellow;
+    border-color: yellow;
+    color: white;
+    font-weight: bolder;
+}
+
+.btn-secondary:hover{
+    background-color: black;
+    box-shadow: 5px 5px 15px yellow;
+    border-color: yellow;
+    color: white;
+    font-weight: bolder;
+}
+
+
+.col{
+    margin-left: 40px;
+}

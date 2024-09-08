@@ -1,0 +1,125 @@
+<div class="body">
+  <div class="card">
+    <h5 class="card-header">Registration Form</h5>
+    <div class="card-body">
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="form-row">
+          <!-- First Name -->
+          <div class="form-group col-6">
+            <label for="firstName">First Name</label>
+            <input
+              id="firstName"
+              type="text"
+              formControlName="firstName"
+              class="form-control"
+            />
+            <div *ngIf="registerForm.get('firstName')?.invalid && registerForm.get('firstName')?.touched">
+              <small class="error" *ngIf="registerForm.get('firstName')?.errors?.['required']">First Name is required.</small>
+              <small class="error" *ngIf="registerForm.get('firstName')?.errors?.['pattern']">First Name must be 2-50 characters long and can include letters, apostrophes, or hyphens.</small>
+            </div>
+          </div>
+
+          <!-- Last Name -->
+          <div class="form-group col-6">
+            <label for="lastName">Last Name</label>
+            <input
+              id="lastName"
+              type="text"
+              formControlName="lastName"
+              class="form-control"
+            />
+            <div *ngIf="registerForm.get('lastName')?.invalid && registerForm.get('lastName')?.touched">
+              <small class="error" *ngIf="registerForm.get('lastName')?.errors?.['required']">Last Name is required.</small>
+              <small class="error" *ngIf="registerForm.get('lastName')?.errors?.['pattern']">Last Name must be 2-50 characters long and can include letters, apostrophes, or hyphens.</small>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group col-6">
+            <label for="email">Email</label>
+            <input
+              id="email"
+              type="email"
+              formControlName="email"
+              class="form-control"
+            />
+            <div *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched">
+              <small class="error" *ngIf="registerForm.get('email')?.errors?.['required']">Email is required.</small>
+              <small class="error" *ngIf="registerForm.get('email')?.errors?.['email']">Invalid email format.</small>
+            </div>
+          </div>
+
+          <!-- Password -->
+          <div class="form-group col-6">
+            <label for="password">Password</label>
+            <input
+              id="password"
+              type="password"
+              formControlName="password"
+              class="form-control"
+            />
+            <div *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched">
+              <small class="error" *ngIf="registerForm.get('password')?.errors?.['required']">Password is required.</small>
+              <small class="error" *ngIf="registerForm.get('password')?.errors?.['pattern']">Password must be at least 8 characters long, include uppercase and lowercase letters, a number, and a special character.</small>
+            </div>
+          </div>
+
+          <!-- Meter Number -->
+          <div class="form-group col-6">
+            <label for="meterNumber">Meter Number</label>
+            <input
+              id="meterNumber"
+              type="text"
+              formControlName="meterNumber"
+              class="form-control"
+            />
+            <div *ngIf="registerForm.get('meterNumber')?.invalid && registerForm.get('meterNumber')?.touched">
+              <small class="error" *ngIf="registerForm.get('meterNumber')?.errors?.['required']">Meter Number is required.</small>
+              <small class="error" *ngIf="registerForm.get('meterNumber')?.errors?.['pattern']">Meter Number must be 6-10 digits long.</small>
+            </div>
+          </div>
+
+          <!-- Board State -->
+          <div class="form-group col-6">
+            <label for="boardState">Board State</label>
+            <input
+              id="boardState"
+              type="text"
+              formControlName="boardState"
+              class="form-control"
+            />
+            <div *ngIf="registerForm.get('boardState')?.invalid && registerForm.get('boardState')?.touched">
+              <small class="error" *ngIf="registerForm.get('boardState')?.errors?.['required']">Board State is required.</small>
+              <small class="error" *ngIf="registerForm.get('boardState')?.errors?.['pattern']">Board State must be 2-50 characters long and can include letters, apostrophes, or hyphens.</small>
+            </div>
+          </div>
+
+          <!-- City -->
+          <div class="form-group col-6">
+            <label for="city">City</label>
+            <input
+              id="city"
+              type="text"
+              formControlName="city"
+              class="form-control"
+            />
+            <div *ngIf="registerForm.get('city')?.invalid && registerForm.get('city')?.touched">
+              <small class="error" *ngIf="registerForm.get('city')?.errors?.['required']">City is required.</small>
+              <small class="error" *ngIf="registerForm.get('city')?.errors?.['pattern']">City must be 2-100 characters long and can include letters and spaces.</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <p>If you already have an account, <a routerLink="/login">Login Here</a></p>
+        </div>
+
+        <div class="text-center">
+          <button class="btn btn-primary mr-1" type="submit">Register</button>
+          <button class="btn btn-secondary" type="button" (click)="onReset()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+

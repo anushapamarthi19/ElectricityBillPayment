@@ -1,0 +1,170 @@
+.card {
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+    box-shadow: 0 0 10px rgba(25, 212, 84, 0.929);
+}
+
+
+.card-header {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+.card-body {
+    padding: 10px;
+}
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+.form-label {
+    font-weight: bold;
+}
+
+
+.btn-warning {
+    background-color: #faf6f6;
+    border-color: #ff9800;
+    border-radius: 10px;
+}
+
+
+.btn-warning:hover {
+    background-color: #e68a00;
+    border-color: #e68a00;
+}
+
+.btn-success { 
+    border-color: #36b553;
+    border-radius: 20px;
+
+}
+
+
+.btn-success:hover {
+    background-color: #23e44d; 
+    border-color: #34a54f;
+    border-radius: 20px;
+}
+
+
+/* Overall container styling */
+.container {
+    background-color: rgba(0, 0, 0, 0.087); 
+    top:40px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styling */
+form {
+    background-color: rgba(0, 0, 0, 0.039); 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.form-label {
+    color: #ffffff; 
+    font-weight: bold;
+    font-size:25px;
+    padding:10px;
+}
+
+
+.form-control {
+    border: 1px solid #ced4da; 
+    border-radius: 4px;
+}
+
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+
+.btn-primary:hover {
+    background-color: #0056b3; 
+    border-color: #004085;
+}
+
+
+/* User details section styling */
+.mt-4 {
+    background-color: rgba(0, 0, 0, 0.4); 
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+h2 {
+    color: rgb(12, 12, 12);
+    font-size: 40px;
+}
+
+
+h4 {
+    color: #0cd123; 
+    font-size: 30px;
+}
+
+
+p {
+    color: #020318; 
+    font-size: 20px;
+}
+
+strong{
+    color:#3a21fcc3;
+    font-size: 20px;
+}
+
+button{
+    text-align: center;
+    padding: 5px;
+}
+
+.btn-success{
+    text-align: center;
+    padding: 5px;
+    color: black;
+    background-color:rgba(17, 168, 17, 0.954);
+}
+
+/*
+.background-image-container {
+    background-image: url('img.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}*/
+img { border-radius: 8px; }
+
+
+.header-image{
+    width:40px;
+    height:40px;
+    margin-right:10px;
+    opacity: 0.8;;
+}
+
+.body{
+    background-image: url('../../assets/Img5.jpg');
+    height: 1050px;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+p{
+    color: white;
+}
+.text-light{color:white}
+

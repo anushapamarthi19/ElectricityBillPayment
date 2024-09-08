@@ -1,0 +1,47 @@
+<div class="body">
+    <div class="row mt-4">
+      <div class="col-md-6 offset-md-3">
+        <div class="card bg-info">
+          <div class="card-header bg-secondary text-white">
+            <h4>Electricity Bill Details</h4>
+          </div>
+          <form [formGroup]="electricityForm" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+              <label for="meterNumber" class="form-label">Meter Number:</label>
+              <input type="text" id="meterNumber" formControlName="meterNumber" class="form-control" placeholder="Enter Meter Number">
+            </div>
+            <button type="submit" class="btn btn-primary">Get User Details</button>
+
+            <div *ngIf="errorMessage" class = "alert alert-danger mt-3">
+                {{errorMessage}}
+            </div>
+
+            <div class="card-body mt-3" *ngIf="userDetails">
+              <p><strong class="text-light">Full Name:</strong> {{ userDetails.firstName }} {{ userDetails.lastName }}</p>
+              <!--<p><strong class="text-danger">Last Name:</strong> {{ userDetails.lastName }}</p>-->
+              <p><strong class="text-light">Meter Number:</strong> {{ userDetails.meterNumber }}</p>
+              <p><strong class="text-light">Board State:</strong> {{ userDetails.boardState }}</p>
+              <p><strong class="text-light">City:</strong> {{ userDetails.city }}</p>
+              <p><strong class="text-light">Email:</strong> {{ userDetails.email }}</p>
+
+
+            <!-- Billing Details Section -->
+            <div *ngIf="billingDetails">
+                <h5 class="mt-4">Billing Details</h5>
+                <p><strong class="text-light">Bill Number:</strong> {{ billingDetails.billNumber }}</p>
+                <p><strong class="text-light">Amount:</strong> ₹{{ billingDetails.amount }}</p>
+                <p><strong class="text-light">Billing Date:</strong> {{ billingDetails.billingDate }}</p>
+                <p><strong class="text-light">Due Date:</strong> {{ billingDetails.dueDate }}</p>
+                <p><strong class="text-light">Units Consumed:</strong> {{ billingDetails.units }}</p>
+                <p><strong class="text-light">Status:</strong> {{ billingDetails.status }}</p>
+              </div>
+
+              <button class="btn btn-success mt-3" (click)="pay()">Pay Now</button>
+            </div>
+            <div *ngIf="!userDetails && !electricityForm.controls['meterNumber'].invalid">
+            </div>
+          </form>              
+        </div>
+      </div>
+    </div>
+  </div>
